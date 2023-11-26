@@ -1,0 +1,58 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 12px 35px;
+  width: 100%;
+  height: 3.25rem;
+  max-width: 274px;
+  font-weight: 500;
+  font-size: 18px;
+  white-space: nowrap;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  &--accent {
+    border-color: var(--accent);
+    color: var(--deepblack);
+    background-color: var(--accent);
+  }
+
+  &--top {
+    margin: auto auto 0;
+
+    @include breakpoint(md) {
+      margin: 60px 0 0;
+      height: 5rem;
+      max-width: 26rem;
+      font-size: 21px;
+    }
+  }
+
+  &--header {
+    margin: 0 auto;
+    max-width: 17.1rem;
+
+    @include breakpoint(lg) {
+      margin: 0 1rem;
+    }
+  }
+
+  &--wide {
+    width: 100%;
+    max-width: none;
+  }
+
+  &--grey {
+    border-color: var(--grey);
+    font-size: 18px;
+    color: var(--light-color);
+    background-color: var(--grey);
+  }
+}

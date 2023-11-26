@@ -1,0 +1,69 @@
+.contacts {
+  &__section-title {
+    margin-bottom: 12px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 28px;
+    }
+
+    @include breakpoint(md) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 12px;
+    font-size: 21px;
+
+    @include breakpoint(sm) {
+      font-size: 28px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 34px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 32px;
+    }
+
+    @include breakpoint(xl) {
+      font-size: 48px;
+    }
+  }
+
+  &-text {
+    margin-bottom: 20px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-bottom: 70px;
+    container-name: contactsbtn;
+    container-type: inline-size;
+    gap: 16px;
+
+    @include breakpoint(xl) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .btn {
+      max-width: none;
+
+      @include breakpoint(xl) {
+        max-width: 274px;
+      }
+    }
+  }
+}

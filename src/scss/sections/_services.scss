@@ -1,0 +1,99 @@
+.services {
+  &-items {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    // margin: 0 auto;
+    gap: 20px;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @include breakpoint(xxl) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 20px 10px;
+    min-width: 290px;
+    max-width: 350px;
+    background-color: var(--lightblue);
+
+    &-img {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 127px;
+      height: 127px;
+
+      picture {
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      @include breakpoint(md) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-title {
+      font-size: 21px;
+
+      @include breakpoint(sm) {
+        font-size: 24px;
+      }
+
+      @include breakpoint(md) {
+        font-size: 24px;
+      }
+
+      @include breakpoint(md) {
+        font-size: 26px;
+      }
+
+      @include breakpoint(xxl) {
+        font-size: 32px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 80px;
+
+      @include breakpoint(md) {
+        margin-bottom: 64px;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 21px;
+      white-space: nowrap;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    @include breakpoint(md) {
+      padding: 24px 12px;
+      max-width: 430px;
+    }
+
+    @include breakpoint(xxl) {
+      margin: 0;
+      padding: 24px;
+    }
+  }
+}

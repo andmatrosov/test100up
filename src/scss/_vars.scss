@@ -1,0 +1,37 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Roboto", sans-serif;
+  --content-width: 100%;
+  --container-offset: 15px;
+  --container-width: var(--content-width);
+
+  // colors
+  --light-color: #fff;
+  --black: #151515;
+  --deepblack: #0c0c0c;
+  --accent: #fff81b;
+  --lightblue: #dde9f5;
+  --accent2: #f6f6f6;
+  --grey: #292929;
+  --grey2: #202020;
+
+  @include breakpoint(md) {
+    --content-width: 696px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  }
+
+  @include breakpoint(lg) {
+    --content-width: 928px;
+  }
+
+  @include breakpoint(xl) {
+    --content-width: 1168px;
+  }
+
+  @include breakpoint(xxl) {
+    --content-width: 1780px;
+  }
+}

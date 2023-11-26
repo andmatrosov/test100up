@@ -1,0 +1,193 @@
+.car-card {
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 423px;
+  background-color: var(--light-color);
+  container-type: inline-size;
+
+  &__top {
+    background-color: var(--accent2);
+
+    &-img {
+      display: block;
+      margin: 0;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    &-stat {
+      padding: 10px 9px 0;
+    }
+
+    &-btns {
+      display: flex;
+      gap: 14px;
+    }
+
+    &-btns .icon {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+    }
+
+    &-brand {
+      display: block;
+      margin-bottom: 0;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__tags {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 10px 8px;
+    gap: 8px;
+
+    &-item {
+      border-radius: 15px;
+      padding: 8px;
+      box-shadow: 0 5px 10px rgba(0 0 0 / 10%);
+      font-size: 12px;
+      background-color: var(--lightblue);
+
+      @include breakpoint(md) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__body {
+    padding: 12px 9px;
+    background-color: var(--accent2);
+
+    &-title {
+      margin-bottom: 8px;
+      font-size: 21px;
+
+      @include breakpoint(md) {
+        font-size: 24px;
+      }
+
+      @container (min-width: 320px) {
+        font-size: 24px;
+      }
+    }
+
+    &-spec {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 16px;
+      color: var(--deepblack);
+    }
+
+    @include breakpoint(md) {
+      padding: 18px;
+    }
+  }
+
+  &__info {
+    padding: 0;
+    color: var(--grey);
+
+    &-item {
+      padding: 5px 0;
+      font-size: 16px;
+
+      span {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 2px;
+        margin-left: 5px;
+        border-bottom: 1px dashed var(--grey);
+        width: 100%;
+      }
+    }
+  }
+
+  .price-block {
+    margin-bottom: 20px;
+
+    &__price {
+      width: 50%;
+
+      @container (min-width: 290px) {
+        width: 55%;
+      }
+
+      @container (min-width: 340px) {
+        width: 65%;
+      }
+    }
+
+    &__credit {
+      width: 40%;
+
+      @container (min-width: 320px) {
+        width: 44%;
+      }
+
+      @container (min-width: 370px) {
+        width: auto;
+      }
+    }
+
+    &__label {
+      display: inline-block;
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: var(--grey);
+    }
+
+    &__wrapp {
+      white-space: nowrap;
+      gap: 5px;
+
+      @container (min-width: 290px) {
+        gap: 10px;
+      }
+    }
+
+    &__actual {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--black);
+
+      @container (min-width: 320px) {
+        font-size: 18px;
+      }
+
+      @container (min-width: 380px) {
+        font-size: 22px;
+      }
+
+      @container (min-width: 410px) {
+        font-size: 28px;
+      }
+    }
+
+    &__old {
+      font-weight: 400;
+      font-size: 12px;
+      text-decoration: line-through;
+      color: var(--grey);
+
+      @container (min-width: 300px) {
+        font-size: 14px;
+      }
+
+      @container (min-width: 360px) {
+        font-size: 18px;
+      }
+    }
+
+    &__actual,
+    &__old {
+      line-height: 1;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.catalog {
+  background-color: var(--lightblue);
+
+  .show-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 21px;
+
+    svg {
+      margin-left: 5px;
+      width: 25px;
+    }
+  }
+}

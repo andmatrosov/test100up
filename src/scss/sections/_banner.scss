@@ -1,0 +1,67 @@
+.banner {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding: 240px 0 40px;
+  color: var(--light-color);
+  background-color: var(--grey);
+
+  &-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &-text {
+    margin-bottom: 24px;
+    font-size: 16px;
+
+    @include breakpoint(sm) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(md) {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+  }
+
+  .btn {
+    @include breakpoint(sm) {
+      margin: 0 auto;
+    }
+  }
+
+  &-content {
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    padding: 20px 30px;
+    background: rgb(217 217 217 / 8%);
+    -webkit-backdrop-filter: blur(45px);
+    backdrop-filter: blur(45px);
+
+    @include breakpoint(md) {
+      padding: 40px 80px;
+    }
+
+    @include breakpoint(xl) {
+      padding: 65px 120px;
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: 44px 0;
+  }
+}
